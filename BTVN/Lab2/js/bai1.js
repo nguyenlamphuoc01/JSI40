@@ -8,22 +8,49 @@ let cargoHold = [
   "security blanket",
 ];
 
-let index = cargoHold.indexOf("slinky");
-cargoHold[index] = "space tether";
-document.getElementById("p1").textContent = cargoHold;
+// 1. thay đổi 'slinky' thành 'space tether'
+// ------------------------------------
+// cargoHold[5] = 'space tether';
+// console.log(cargoHold);
+// ------------------------------------
+// let newList = cargoHold.map((item) => {
+//   if (item === "slinky") {
+//     return "space tether";
+//    }
+//    return item;
+//  });
+//  console.log(newList);
+//  ------------------------------------
+// cargoHold.forEach((item, index) => {
+//   if (item === "slinky") {
+//     cargoHold[index] = "space tether";
+//   }
+// });
+// console.log(cargoHold);
 
-let removedLast = cargoHold.pop();
-document.getElementById("p2").textContent =
-  "Phần tử bị xóa: " + removedLast + "\nMảng mới: " + cargoHold;
+// =====================================
+// 2.a. xoa phan tu cuoi cung
+cargoHold.pop();
+console.log(cargoHold);
 
-let removedFirst = cargoHold.shift();
-document.getElementById("p3").textContent =
-  "Phần tử bị xóa: " + removedFirst + "\nMảng mới: " + cargoHold;
+// =====================================
+// 2.b. xoa phan tu dau tien
+cargoHold.shift();
+console.log(cargoHold);
 
-cargoHold.unshift(1138);
-cargoHold.push("20 meters");
-document.getElementById("p4").textContent = cargoHold;
+// =====================================
+// 3. them 1138 vao dau + them '20 meters' vao cuoi
+cargoHold.unshift(1138); // them dau
+cargoHold.push("20 meters"); // them cuoi
+console.log(cargoHold);
 
-document.getElementById(
-  "p5"
-).textContent = `Mảng cuối: ${cargoHold}\nChiều dài: ${cargoHold.length}`;
+// =====================================
+// 4. in mang + len voi template literal
+console.log(`Cargo Hold Contents: ${cargoHold.join(", ")}\n
+Total Items: ${cargoHold.length}`);
+
+// =====================================
+/**
+ * Thêm - xóa đầu: shift - unshift
+ * Thêm - xóa cuối: push - pop
+ */

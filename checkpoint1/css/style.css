@@ -1,0 +1,10 @@
+body {
+  background-color: #f8f9fa;
+}
+.form-container {
+  max-width: 450px; 
+  margin-top: 50px;
+}
+.nav-link.active {
+  font-weight: bold;
+}
